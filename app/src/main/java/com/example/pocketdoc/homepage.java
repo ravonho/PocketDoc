@@ -58,23 +58,8 @@ public class homepage extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.nav_appointment:
-                        Log.i("Menu_Drawer_Tag", "My appointment item is clicked");
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_camera:
-                        Log.i("Menu_Drawer_Tag", "Camera item is clicked");
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_register:
-                        Log.i("Menu_Drawer_Tag", "Register item is clicked");
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_setting:
-                        Log.i("Menu_Drawer_Tag", "Setting item is clicked");
+                    case R.id.nav_contact:
+                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

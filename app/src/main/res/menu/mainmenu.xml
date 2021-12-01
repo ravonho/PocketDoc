@@ -13,10 +13,6 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="Home" />
 
-        <item
-            android:id="@+id/nav_appointment"
-            android:icon="@drawable/ic_baseline_event_available_24"
-            android:title="My Appointment" />
     </group>
 
     <group android:checkableBehavior="single">
@@ -24,14 +20,9 @@
 <menu>
     <group>
 
-        <item android:title="Camera" android:icon="@drawable/ic_baseline_photo_camera_24"
-            android:id="@+id/nav_camera" />
+        <item android:title="Contact us" android:icon="@drawable/ic_baseline_contact_support_24"
+            android:id="@+id/nav_contact" />
 
-        <item android:title="Register" android:icon="@drawable/ic_baseline_computer_24"
-            android:id="@+id/nav_register" />
-
-        <item android:title="Setting" android:icon="@drawable/ic_baseline_settings_24"
-            android:id="@+id/nav_setting" />
     </group>
 </menu>
         </item>
