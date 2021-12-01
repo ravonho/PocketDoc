@@ -63,6 +63,11 @@ public class homepage extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
+                    case R.id.nav_camera:
+                        Log.i("Menu_Drawer_Tag", "Camera item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
                     case R.id.nav_register:
                         Log.i("Menu_Drawer_Tag", "Register item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
