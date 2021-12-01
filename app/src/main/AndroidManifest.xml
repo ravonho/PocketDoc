@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PocketDoc">
         <activity
+            android:name=".SearchDisease"
+            android:exported="false" />
+        <activity
+            android:name=".SearchDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".AddAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".Myappointment"
+            android:exported="false" />
+        <activity
             android:name=".registerpage"
             android:exported="false" />
         <activity
