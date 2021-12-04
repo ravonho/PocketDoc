@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "997484285345",
+    "firebase_url": "https://pocketdoc-c456f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pocketdoc-c456f",
+    "storage_bucket": "pocketdoc-c456f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997484285345:android:0abe34413b1a2ee0718fe0",
+        "android_client_info": {
+          "package_name": "com.example.pocketdoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997484285345-mnr0n9mohtuas4jn7nnsmlg4skmj9tes.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2uUstqEGMgVlZBOIRGLFgKTs7DhpyPG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997484285345-mnr0n9mohtuas4jn7nnsmlg4skmj9tes.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
