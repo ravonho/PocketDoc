@@ -143,7 +143,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/headermenu"
-        app:menu="@menu/mainmenu">
+        app:menu="@menu/docmenu">
     </com.google.android.material.navigation.NavigationView>
 
 
