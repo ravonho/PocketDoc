@@ -21,7 +21,7 @@ public class profile extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    TextInputLayout username, password;
+    TextInputLayout username, password,fullName, email, phoneNo, fullNameLabel, usernameLabel;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
