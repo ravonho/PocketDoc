@@ -2,4 +2,9 @@
     <string name="app_name">PocketDoc</string>
     <string name="menu_Open">Open</string>
     <string name="menu_CLose">Close</string>
+    <string-array name="spinner">
+        <item>User Type</item>
+        <item>Patient</item>
+        <item>Doctor</item>
+    </string-array>
 </resources>
