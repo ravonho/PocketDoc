@@ -21,31 +21,12 @@ import android.widget.Spinner;
 public class registerpage extends AppCompatActivity {
 
     Button regbtn;
-    Spinner spinner;
-    String spinner_value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registerpage);
 
-        spinner = findViewById(R.id.spinner_type);
-        String user_type[] = getResources().getStringArray(R.array.spinner);
-        ArrayAdapter<String> spinner_adapter = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item, user_type);
-        spinner_adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        spinner.setAdapter(spinner_adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinner_value = parent.getItemAtPosition(position).toString();
-                Log.d("spinner_value", "spinner_value" + spinner_value);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
         regbtn =findViewById(R.id.reg);
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override

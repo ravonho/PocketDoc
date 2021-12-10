@@ -19,11 +19,11 @@
             app:layout_constraintTop_toTopOf="parent"
             android:orientation="vertical"
             android:background="#00bfff">
+
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:src="@drawable/pocket"
-                />
+                android:layout_height="80dp"
+                android:src="@drawable/pocket" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,125 +39,170 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="180dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="132dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:id="@+id/addappointment"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="60dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="25dp"
-                android:id="@+id/addappointment">
+                app:cardElevation="25dp">
+
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_baseline_add_24"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="Add             Appointment"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="120dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="Add             Appointment"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:id="@+id/searchD"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="25dp"
-                android:id="@+id/searchD">
+                app:cardElevation="25dp">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_baseline_search_24"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_search_24" />
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="Search             Disease"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="120dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="Search        Disease"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="380dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="288dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
+                android:id="@+id/searchDr"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="60dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="25dp"
-                android:id="@+id/searchDr">
+                app:cardElevation="25dp">
+
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_baseline_person_search_24"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_person_search_24" />
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="Search             Doctor"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="120dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="Search             Doctor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
+                android:id="@+id/myappointment"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="20dp"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="25dp"
-                android:id="@+id/myappointment">
+                app:cardElevation="25dp">
+
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_baseline_event_available_24"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_event_available_24" />
+
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="My            Appointment"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="120dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="My            Appointment"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="440dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchHospital"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="25dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_location_city_24" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="Search             Hospital"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
