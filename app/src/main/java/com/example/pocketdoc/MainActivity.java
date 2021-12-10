@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
     TextView username, password;
-    Button loginbtn, registerbtn;
+    Button loginbtn, registerbtn, docLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +46,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        docLogin = findViewById(R.id.register1);
+        docLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, dochomepage.class));
+            }
+        });
     }
 }
