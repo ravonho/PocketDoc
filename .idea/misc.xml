@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_add_appointment.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_docprofile.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_profile.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.19074074074074074" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_add_appointment.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_contactus.xml" value="0.17119565217391305" />
