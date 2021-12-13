@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.TextureView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputLayout;
@@ -21,7 +23,8 @@ public class profile extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    TextInputLayout username, password,fullName, email, phoneNo, fullNameLabel, usernameLabel;
+    TextInputLayout username, password,fullName, email, phoneNo;
+    TextView fullNameLabel, usernameLabel;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -39,9 +42,9 @@ public class profile extends AppCompatActivity {
         DrawerFunction();
         //Hooks
         fullName = findViewById(R.id.full_name_profile);
-        email = findViewById(R.id.email_profile);
-        phoneNo = findViewById(R.id.phone_no_profile);
-        password = findViewById(R.id.password_profile);
+        email = findViewById(R.id.username_email);
+        phoneNo = findViewById(R.id.phone_number);
+        //password = findViewById(R.id.password_profile);
         fullNameLabel = findViewById(R.id.fullname_field);
         usernameLabel = findViewById(R.id.username_field);
 
