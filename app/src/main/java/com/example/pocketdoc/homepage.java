@@ -19,7 +19,7 @@ import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class homepage extends AppCompatActivity {
+public class homepage extends AppCompatActivity implements View.OnClickListener{
 
     private CardView D1, D2, D3, D4, D5;
 
@@ -91,5 +91,26 @@ public class homepage extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.addappointment : i = new Intent(this,AddAppointment.class); startActivity(i);
+            break;
+
+            case R.id.searchDr : i = new Intent(this,SearchDoctor.class); startActivity(i);
+                break;
+
+            case R.id.searchD : i = new Intent(this,SearchDisease.class); startActivity(i);
+                break;
+
+            case R.id.myappointment : i = new Intent(this,Myappointment.class); startActivity(i);
+                break;
+
+            case R.id.searchHospital:  i = new Intent(this,SearchHospital.class); startActivity(i);
+                break;
+        }
     }
 }
