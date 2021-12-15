@@ -18,7 +18,7 @@
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
-         />
+        />
 
     <EditText
         android:id="@+id/username"

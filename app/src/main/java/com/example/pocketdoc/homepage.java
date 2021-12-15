@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -18,7 +19,9 @@ import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class homepage extends AppCompatActivity {
+public class homepage extends AppCompatActivity implements View.OnClickListener{
+
+    private CardView D1, D2, D3, D4, D5;
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -38,6 +41,19 @@ public class homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+
+        D1 = (CardView) findViewById(R.id.addappointment);
+        D2 = (CardView) findViewById(R.id.searchDr);
+        D3 = (CardView) findViewById(R.id.searchD);
+        D4 = (CardView) findViewById(R.id.myappointment);
+        D5 = (CardView) findViewById(R.id.searchHospital);
+
+        D1.setOnClickListener((View.OnClickListener) this);
+        D2.setOnClickListener((View.OnClickListener) this);
+        D3.setOnClickListener((View.OnClickListener) this);
+        D4.setOnClickListener((View.OnClickListener) this);
+        D5.setOnClickListener((View.OnClickListener) this);
+
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open, R.string.menu_CLose);
@@ -48,7 +64,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch(item.getItemId()) {
+                switch (item.getItemId()) {
                     case R.id.nav_home:
                         Log.i("MENU_DRAWER_TAG", "Home item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
@@ -75,6 +91,26 @@ public class homepage extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    @Override
+    public void onClick(View v) {
+        Intent i;
 
+        switch (v.getId()) {
+            case R.id.addappointment : i = new Intent(this,AddAppointment.class); startActivity(i);
+            break;
+
+            case R.id.searchDr : i = new Intent(this,SearchDoctor.class); startActivity(i);
+                break;
+
+            case R.id.searchD : i = new Intent(this,SearchDisease.class); startActivity(i);
+                break;
+
+            case R.id.myappointment : i = new Intent(this,Myappointment.class); startActivity(i);
+                break;
+
+            case R.id.searchHospital:  i = new Intent(this,SearchHospital.class); startActivity(i);
+                break;
+        }
     }
 }
