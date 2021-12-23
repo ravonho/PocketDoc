@@ -75,6 +75,7 @@ public class SearchHospital extends AppCompatActivity {
                     case R.id.nav_home:
                         Log.i("MENU_DRAWER_TAG", "Home item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(SearchHospital.this, homepage.class));
                         break;
 
                     case R.id.nav_profile:
