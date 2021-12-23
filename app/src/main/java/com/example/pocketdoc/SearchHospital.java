@@ -43,11 +43,61 @@ public class SearchHospital extends AppCompatActivity {
 
     EditText Search;
     ListView listview;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_hospital);
+
+        drawerLayout = findViewById(R.id.drawerlayout);
+        navigationView = findViewById(R.id.navigationView);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open, R.string.menu_CLose);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        Log.i("MENU_DRAWER_TAG", "Home item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.nav_profile:
+                        Log.i("Menu_Drawer_Tag", "Profile item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(SearchHospital.this, profile.class));
+                        break;
+
+                    case R.id.nav_contact:
+                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(SearchHospital.this, contactus.class));
+                        break;
+
+                    case R.id.nav_logout:
+                        Log.i("Menu_Drawer_Tag", "Logout item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(SearchHospital.this, Login.class));
+                        break;
+                }
+                return true;
+            }
+        });
 
         listview = findViewById(R.id.list_view);
         Search = findViewById(R.id.search);
@@ -71,7 +121,7 @@ public class SearchHospital extends AppCompatActivity {
     ArrayList<Object> model;
     void search_data(String data_search)
     {
-        String url="http://192.168.1.9/api_template/index.php?action=showHospital&Name="+data_search;
+        String url="https://pocket-dr.herokuapp.com/index.php?action=showHospital&Name="+data_search;
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
                 url,
