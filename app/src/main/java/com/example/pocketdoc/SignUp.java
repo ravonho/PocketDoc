@@ -70,12 +70,13 @@ public class SignUp extends AppCompatActivity {
                             field[3] = "email";
                             field[4] = "contact";
                             //Creating array for data
-                            String[] data = new String[5];
+                            String[] data = new 9String[5];
                             data[0] = fullname;
                             data[1] = username;
                             data[2] = password;
                             data[3] = email;
                             data[4] = contact;
+                            
                             PutData putData = new PutData("http://192.168.1.10/login-signup/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {

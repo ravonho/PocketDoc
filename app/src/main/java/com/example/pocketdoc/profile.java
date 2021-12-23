@@ -82,7 +82,7 @@ public class profile extends AppCompatActivity {
                     case R.id.nav_logout:
                         Log.i("Menu_Drawer_Tag", "Logout item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(new Intent(profile.this, MainActivity.class));
+                        startActivity(new Intent(profile.this, Login.class));
                         break;
                 }
                 return true;
