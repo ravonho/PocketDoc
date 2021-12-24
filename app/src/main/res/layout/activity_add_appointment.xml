@@ -26,8 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="416dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Time"
@@ -35,7 +39,8 @@
         android:layout_height="57dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="@android:color/darker_gray"
-        android:hint="Select Time"
+        android:hint="00:00 AM/PM"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
@@ -49,7 +54,8 @@
         android:layout_height="47dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="@android:color/darker_gray"
-        android:hint="Choose Date"
+        android:hint="DD/MM/YYYY"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
@@ -58,12 +64,12 @@
         app:layout_constraintVertical_bias="0.223" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/Location"
         android:layout_width="231dp"
         android:layout_height="57dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="@android:color/darker_gray"
-        android:hint="Choose Doctor"
+        android:hint="Choose Hospital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
@@ -72,42 +78,16 @@
         app:layout_constraintVertical_bias="0.465" />
 
     <ImageButton
-        android:id="@+id/Add_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228"
-        app:srcCompat="@drawable/ic_baseline_event_available_24"
-        android:onClick="showTimePickerDialog"/>
-
-    <ImageButton
-        android:id="@+id/Add_Time"
-        android:layout_width="45dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333"
-        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
-        android:onClick="showDatePickerDialog"/>
-
-    <ImageButton
-        android:id="@+id/Choose_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:layout_constraintVertical_bias="0.467"
+        app:srcCompat="@drawable/ic_baseline_home_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

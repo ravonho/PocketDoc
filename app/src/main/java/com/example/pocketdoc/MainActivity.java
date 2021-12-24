@@ -1,49 +1,51 @@
 package com.example.pocketdoc;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.os.Handler;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView username, password;
-    Button loginbtn, registerbtn;
+    private static int SPLASH_SCREEN = 5000;
+
+    //Variables
+    Animation topAnim;
+    Animation bottomAnim;
+    ImageView image;
+    TextView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        loginbtn = findViewById(R.id.login);
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, homepage.class));
-            }
-        });
+        //Animation
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        bottomAnim =AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        registerbtn = findViewById(R.id.register);
-        registerbtn.setOnClickListener(new View.OnClickListener() {
+        //Hook
+        image =findViewById(R.id.imageview);
+        logo = findViewById(R.id.textview);
+
+        image.setAnimation(topAnim);
+        logo.setAnimation(bottomAnim);
+
+        new Handler().postDelayed(new Runnable () {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, registerpage.class));
+            public void run() {
+                Intent intent = new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
+                finish();
             }
-        });
+        },SPLASH_SCREEN);
+
     }
 }
