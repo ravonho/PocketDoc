@@ -4,6 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchDoctor">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView5"-->
+<!--        android:layout_width="416dp"-->
+<!--        android:layout_height="202dp"-->
+<!--        tools:layout_editor_absoluteX="-3dp"-->
+<!--        tools:layout_editor_absoluteY="-22dp" />-->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="417dp"
+        android:layout_height="50dp"
+        android:background="#036998"
+        android:gravity="center"
+        android:text="Doctor's Database"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="352dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <SearchView
+        android:layout_width="51dp"
+        android:layout_height="47dp"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:background="#036998"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
