@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener{
 
-    private CardView D1, D2, D3, D4, D5;
+    private CardView D1, D2, D3, D4, D5, D6;
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -47,12 +47,14 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
         D3 = (CardView) findViewById(R.id.searchD);
         D4 = (CardView) findViewById(R.id.myappointment);
         D5 = (CardView) findViewById(R.id.searchHospital);
+        D6 = (CardView) findViewById(R.id.checkin);
 
         D1.setOnClickListener((View.OnClickListener) this);
         D2.setOnClickListener((View.OnClickListener) this);
         D3.setOnClickListener((View.OnClickListener) this);
         D4.setOnClickListener((View.OnClickListener) this);
         D5.setOnClickListener((View.OnClickListener) this);
+        D6.setOnClickListener((View.OnClickListener) this);
 
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
@@ -110,6 +112,9 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case R.id.searchHospital:  i = new Intent(this,SearchHospital.class); startActivity(i);
+                break;
+
+            case R.id.checkin:  i = new Intent(this,Check_In.class); startActivity(i);
                 break;
         }
     }
