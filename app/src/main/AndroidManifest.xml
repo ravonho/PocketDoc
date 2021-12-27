@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pocketdoc">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -50,6 +51,9 @@
             android:exported="false" />
         <activity
             android:name=".homepage"
+            android:exported="false" />
+        <activity
+            android:name=".Check_In"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
