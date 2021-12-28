@@ -33,6 +33,31 @@ public class Login extends AppCompatActivity {
         textViewSignUp = findViewById(R.id.signUpText);
         progressBar = findViewById(R.id.progress);
 
+
+        String[] field = new String[2];
+        field[0] = "username";
+        field[1] = "password";
+        //Creating array for data
+        String[] data = new String[2];
+        data[0] = "Bernard";
+        data[1] = "1234";
+        PutData putData = new PutData("https://pocket-dr.herokuapp.com/login.php", "POST", field, data);
+
+        if (putData.startPut()) {
+            if (putData.onComplete()) {
+                progressBar.setVisibility(View.GONE);
+                String result = putData.getResult();
+                if (result.equals("Login Success")) {
+                    Intent intent = new Intent(getApplicationContext(), homepage.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                }
+            }
+            //End Write and Read data with URL
+        }
+
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

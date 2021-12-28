@@ -60,14 +60,16 @@
                 android:layout_centerInParent="true"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Search"
+                android:hint="Search"
                 tools:layout_editor_absoluteX="29dp"
                 tools:layout_editor_absoluteY="340dp" />
 
-            <SearchView
+            <ImageView
+                android:id="@+id/searchView"
                 android:layout_width="51dp"
-                android:layout_height="47dp"
+                android:layout_height="30dp"
                 android:layout_alignEnd="@id/editTextTextPersonName4"
+                android:src="@drawable/search_icon"
                 android:layout_centerVertical="true"
                 tools:layout_editor_absoluteX="300dp"
                 tools:layout_editor_absoluteY="340dp" />
