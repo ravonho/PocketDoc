@@ -97,6 +97,8 @@ public class Login extends AppCompatActivity {
                                     String result = putData.getResult();
                                     if (result.equals("Login Success")) {
                                         Intent intent = new Intent(getApplicationContext(), homepage.class);
+                                        intent.putExtra("username",data[0]);
+                                        intent.putExtra("password",data[1]);
                                         startActivity(intent);
                                         finish();
                                     } else {

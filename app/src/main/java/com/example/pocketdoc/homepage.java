@@ -75,7 +75,10 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                     case R.id.nav_profile:
                         Log.i("Menu_Drawer_Tag", "Profile item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(new Intent(homepage.this, profile.class));
+                        Intent intent = new Intent(getApplicationContext(), profile.class);
+                        intent.putExtra("username", getIntent().getStringExtra("username"));
+                        intent.putExtra("password", getIntent().getStringExtra("password"));
+                        startActivity(intent);;
                         break;
 
                     case R.id.nav_contact:
