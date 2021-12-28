@@ -2,7 +2,9 @@ package com.example.pocketdoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -11,8 +13,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pocketdoc.R;
+import com.example.pocketdoc.SignUp;
+import com.example.pocketdoc.homepage;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
+
+import org.json.JSONObject;
 
 public class Login extends AppCompatActivity {
 
@@ -21,11 +28,16 @@ public class Login extends AppCompatActivity {
     TextView textViewSignUp;
     ProgressBar progressBar;
 
+    SharedPreferences mSharedPreferences;
+    SharedPreferences.Editor mEditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mSharedPreferences = getPreferences(Context.MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
 
         textInputEditTextUsername = findViewById(R.id.username);
         textInputEditTextPassword = findViewById(R.id.password);
@@ -33,30 +45,7 @@ public class Login extends AppCompatActivity {
         textViewSignUp = findViewById(R.id.signUpText);
         progressBar = findViewById(R.id.progress);
 
-
-        String[] field = new String[2];
-        field[0] = "username";
-        field[1] = "password";
-        //Creating array for data
-        String[] data = new String[2];
-        data[0] = "Bernard";
-        data[1] = "1234";
-        PutData putData = new PutData("https://pocket-dr.herokuapp.com/login.php", "POST", field, data);
-
-        if (putData.startPut()) {
-            if (putData.onComplete()) {
-                progressBar.setVisibility(View.GONE);
-                String result = putData.getResult();
-                if (result.equals("Login Success")) {
-                    Intent intent = new Intent(getApplicationContext(), homepage.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                }
-            }
-            //End Write and Read data with URL
-        }
+        autoLogin();
 
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,17 +77,14 @@ public class Login extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = username;
                             data[1] = password;
-
                             PutData putData = new PutData("https://pocket-dr.herokuapp.com/login.php", "POST", field, data);
-
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     if (result.equals("Login Success")) {
                                         Intent intent = new Intent(getApplicationContext(), homepage.class);
-                                        intent.putExtra("username",data[0]);
-                                        intent.putExtra("password",data[1]);
+                                        setUserDetails();
                                         startActivity(intent);
                                         finish();
                                     } else {
@@ -114,7 +100,25 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"All fields required", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
+    }
+
+
+    public void setUserDetails() {
+        try {
+            mEditor.putString("username", mSharedPreferences.contains("username") ? mSharedPreferences.getString("username", null) : textInputEditTextUsername.getText().toString());
+            mEditor.putString("password", mSharedPreferences.contains("password") ? mSharedPreferences.getString("password", null) : textInputEditTextPassword.getText().toString());
+            mEditor.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void autoLogin(){
+        if (mSharedPreferences.contains("username")) {
+            Intent intent = new Intent(getApplicationContext(), homepage.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
