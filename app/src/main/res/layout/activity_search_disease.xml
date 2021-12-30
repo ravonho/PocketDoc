@@ -54,27 +54,27 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/editTextDisease"
                 android:layout_width="352dp"
                 android:layout_height="50dp"
                 android:layout_centerInParent="true"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Search"
+                android:hint="Search"
                 tools:layout_editor_absoluteX="29dp"
                 tools:layout_editor_absoluteY="340dp" />
 
             <SearchView
                 android:layout_width="51dp"
                 android:layout_height="47dp"
-                android:layout_alignEnd="@id/editTextTextPersonName4"
+                android:layout_alignEnd="@id/editTextDisease"
                 android:layout_centerVertical="true"
                 tools:layout_editor_absoluteX="300dp"
                 tools:layout_editor_absoluteY="340dp" />
 
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/buttonSDisease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -30,6 +31,13 @@ public class SearchDoctor extends AppCompatActivity {
 
     EditText searchInput;
     ImageView searchView;
+    Button buttonSDoctor;
+    
+    
+    
+    
+    
+    
 
     RequestQueue requestQueue;
     static Map<String, String> params;
@@ -37,6 +45,19 @@ public class SearchDoctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_doctor);
+
+
+        buttonSDoctor = findViewById(R.id.buttonSDoctor);
+        buttonSDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchDoctor.this, homepage.class);
+                startActivity(intent);
+            }
+
+
+        });
+
 
         searchInput = findViewById(R.id.editTextTextPersonName4);
         searchView = findViewById(R.id.searchView);
@@ -58,7 +79,7 @@ public class SearchDoctor extends AppCompatActivity {
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Log.d("Resposne", response);
+                                Log.d("Response", response);
                                 loading.dismiss();
                                 try {
                                     JSONObject doctorData = new JSONObject(response).getJSONArray("results").getJSONObject(0);
@@ -66,8 +87,8 @@ public class SearchDoctor extends AppCompatActivity {
                                     Intent foundDoctor = new Intent(SearchDoctor.this, search_doctor2.class);
                                     foundDoctor.putExtra("doctor_name", doctorData.getString("doctor_name"));
                                     foundDoctor.putExtra("doctor_age", doctorData.getString("doctor_age"));
-                                    foundDoctor.putExtra("doctor_race", doctorData.getString("Chinese"));
-                                    foundDoctor.putExtra("doctor_background", doctorData.getString("Rich Family"));
+                                    foundDoctor.putExtra("doctor_race", doctorData.getString("doctor_race"));
+                                    foundDoctor.putExtra("doctor_background", doctorData.getString("doctor_background"));
                                     foundDoctor.putExtra("doctor_special", doctorData.getString("doctor_special"));
                                     foundDoctor.putExtra("doctor_exp", doctorData.getString("doctor_exp"));
                                     startActivity(foundDoctor);
@@ -91,5 +112,17 @@ public class SearchDoctor extends AppCompatActivity {
                 requestQueue.add(searchRequest);
             }
         });
+
+
+
+
+        
+        
     }
+    
+    
+    
+    
+    
+    
 }

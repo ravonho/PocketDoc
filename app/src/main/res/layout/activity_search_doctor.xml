@@ -59,8 +59,8 @@
                 android:layout_height="50dp"
                 android:layout_centerInParent="true"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="Search"
+                android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="29dp"
                 tools:layout_editor_absoluteY="340dp" />
 
@@ -69,14 +69,14 @@
                 android:layout_width="51dp"
                 android:layout_height="30dp"
                 android:layout_alignEnd="@id/editTextTextPersonName4"
-                android:src="@drawable/search_icon"
                 android:layout_centerVertical="true"
+                android:src="@drawable/search_icon"
                 tools:layout_editor_absoluteX="300dp"
                 tools:layout_editor_absoluteY="340dp" />
 
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/buttonSDoctor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
