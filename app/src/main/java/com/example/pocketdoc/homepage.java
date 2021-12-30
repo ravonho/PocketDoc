@@ -90,7 +90,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                     case R.id.nav_logout:
                         Log.i("Menu_Drawer_Tag", "Logout item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(new Intent(homepage.this, Login.class));
+                        startActivity(new Intent(homepage.this, MainActivity.class));
                         break;
                 }
                 return true;
