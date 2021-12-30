@@ -30,14 +30,8 @@ public class SearchDoctor extends AppCompatActivity {
 
 
     EditText searchInput;
-    ImageView searchView;
+    ImageView searchViewDoctor;
     Button buttonSDoctor;
-    
-    
-    
-    
-    
-    
 
     RequestQueue requestQueue;
     static Map<String, String> params;
@@ -58,14 +52,13 @@ public class SearchDoctor extends AppCompatActivity {
 
         });
 
-
         searchInput = findViewById(R.id.editTextTextPersonName4);
-        searchView = findViewById(R.id.searchView);
+        searchViewDoctor = findViewById(R.id.searchViewDoctor);
 
         requestQueue = Volley.newRequestQueue(SearchDoctor.this);
 
         params = new HashMap<String, String>();
-        searchView.setOnClickListener(new View.OnClickListener() {
+        searchViewDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("Search", searchInput.getText().toString());
@@ -112,17 +105,5 @@ public class SearchDoctor extends AppCompatActivity {
                 requestQueue.add(searchRequest);
             }
         });
-
-
-
-
-        
-        
     }
-    
-    
-    
-    
-    
-    
 }
