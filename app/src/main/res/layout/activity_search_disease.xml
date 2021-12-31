@@ -59,16 +59,18 @@
                 android:layout_height="50dp"
                 android:layout_centerInParent="true"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="Search"
+                android:inputType="textPersonName"
                 tools:layout_editor_absoluteX="29dp"
                 tools:layout_editor_absoluteY="340dp" />
 
-            <SearchView
+            <ImageView
+                android:id="@+id/searchViewDisease"
                 android:layout_width="51dp"
-                android:layout_height="47dp"
+                android:layout_height="30dp"
                 android:layout_alignEnd="@id/editTextDisease"
                 android:layout_centerVertical="true"
+                android:src="@drawable/search_icon"
                 tools:layout_editor_absoluteX="300dp"
                 tools:layout_editor_absoluteY="340dp" />
 
