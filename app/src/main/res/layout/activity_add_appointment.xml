@@ -28,13 +28,13 @@
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.794" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Time"
+        android:id="@+id/ChooseTime"
         android:layout_width="227dp"
         android:layout_height="57dp"
         android:background="@android:color/darker_gray"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.338" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Date"
+        android:id="@+id/ChooseDate"
         android:layout_width="226dp"
         android:layout_height="47dp"
         android:background="@android:color/darker_gray"
@@ -64,30 +64,45 @@
         app:layout_constraintVertical_bias="0.223" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/Location"
-        android:layout_width="231dp"
+        android:id="@+id/ChooseHospital"
+        android:layout_width="227dp"
         android:layout_height="57dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="@android:color/darker_gray"
         android:hint="Choose Hospital"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.465" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="59dp"
-        android:layout_height="54dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ChooseDisease"
+        android:layout_width="227dp"
+        android:layout_height="57dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="Choose Disease"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467"
-        app:srcCompat="@drawable/ic_baseline_home_24" />
+        app:layout_constraintVertical_bias="0.597" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
