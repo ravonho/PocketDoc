@@ -56,6 +56,9 @@
             android:name=".Check_In"
             android:exported="false" />
         <activity
+            android:name=".EditUserPassword"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

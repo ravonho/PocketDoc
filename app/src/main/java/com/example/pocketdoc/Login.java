@@ -85,6 +85,8 @@ public class Login extends AppCompatActivity {
                                     if (result.equals("Login Success")) {
                                         Intent intent = new Intent(getApplicationContext(), homepage.class);
                                         setUserDetails();
+                                        intent.putExtra("username", data[0]);
+                                        intent.putExtra("password", data[1]);
                                         startActivity(intent);
                                         finish();
                                     } else {
@@ -114,11 +116,14 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void autoLogin(){
-        if (mSharedPreferences.contains("username")) {
-            Intent intent = new Intent(getApplicationContext(), homepage.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+//    public void autoLogin(){
+//        if (mSharedPreferences.contains("username")) {
+//            Intent intent = new Intent(getApplicationContext(), homepage.class);
+//            //DO NOT REMOVE BEFORE DISCUSS WITH WKW
+//            intent.putExtra("username", mSharedPreferences.getString("username", "default"));
+//            intent.putExtra("password", mSharedPreferences.getString("password", "defaultPass"));
+//            startActivity(intent);
+//            finish();
+//        }
+//    }
 }

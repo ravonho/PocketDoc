@@ -21,6 +21,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,10 +31,11 @@ import java.util.Map;
 
 public class EditUserPassword extends AppCompatActivity {
 
-    TextInputLayout newpassword, oldpassword, newpassword2;
+    TextInputLayout newpassword,password;
+    TextInputLayout newpassword2;
     Button confirmpassword;
     String username;
-    String password;
+    //String password;
 
     DrawerLayout drawerLayout;
 
@@ -43,12 +45,14 @@ public class EditUserPassword extends AppCompatActivity {
         setContentView(R.layout.activity_edit_user_password);
 
 
-        oldpassword = findViewById(R.id.oldpassword);
+        password = findViewById(R.id.oldpassword);
         newpassword = findViewById(R.id.newpassword);
         newpassword2 = findViewById(R.id.newpassword2);
         confirmpassword = findViewById(R.id.confirmpassword);
-         password = getIntent().getStringExtra("password");
+         //password = getIntent().getStringExtra("password");
          username = getIntent().getStringExtra("username");
+        //Log.i("Username from intent", password);
+        Log.i("Password from intent", username);
 
         confirmpassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,17 +84,39 @@ public class EditUserPassword extends AppCompatActivity {
 
 
     private boolean isOldpasswordValid() {
-        boolean oldpasswordValid;
+        boolean oldpasswordValid = false;
+
+        //Log.i("Current password ", String.valueOf(oldpassword));
+        Log.i("Password from intent", String.valueOf(password));
+        //Starting Write and Read data with URL
+        //Creating array for parameters
+        String[] field = new String[2];
+        field[0] = "username";
+        field[1] = "password";
+        //Creating array for data
+        String[] data = new String[2];
+        data[0] = username;
+        data[1] = password.getEditText().getText().toString();
 
 
-        if (!oldpassword.getEditText().getText().toString().equals(password) ){
-            oldpassword.setErrorEnabled(true);
-            oldpassword.setError("Please enter the right password");
-            oldpasswordValid = false;
-        } else {
-            oldpassword.setErrorEnabled(false);
-            oldpasswordValid = true;
+        PutData putData = new PutData("https://pocket-dr.herokuapp.com/verifypassword.php", "POST", field, data);
+        if (putData.startPut()) {
+            if (putData.onComplete()) {
+                String result = putData.getResult();
+                Log.i("Result", result);
+                Log.i("Username", username);
+                Log.i("password", String.valueOf(password));
+                if (result.equals("Password is correct")) {
+
+                    oldpasswordValid = true;
+                } else {
+                    Toast.makeText(getApplicationContext(),"Please enter the right password", Toast.LENGTH_SHORT).show();
+                    oldpasswordValid = false;
+                }
+            }
+            
         }
+        
 
         return  oldpasswordValid;
     }

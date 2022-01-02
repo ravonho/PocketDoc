@@ -89,6 +89,8 @@ public class profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         target = getIntent().getStringExtra("username");
         userpassword = getIntent().getStringExtra("password");
+        Log.i("Username from intent", target);
+        Log.i("Password from intent", userpassword);
         name = findViewById(R.id.username);
         email = findViewById(R.id.email);
         contact = findViewById(R.id.contact);
@@ -145,7 +147,7 @@ public class profile extends AppCompatActivity {
 
                 Intent Intent = new Intent(profile.this, EditUserPassword.class);
                 Intent.putExtra("username",target);
-                Intent.putExtra("password", userpassword);
+                Intent.putExtra("password",userpassword);
                 startActivity(Intent);
 
 

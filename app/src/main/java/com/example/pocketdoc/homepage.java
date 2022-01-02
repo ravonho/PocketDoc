@@ -78,6 +78,8 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                         Intent intent = new Intent(getApplicationContext(), profile.class);
                         intent.putExtra("username", getIntent().getStringExtra("username"));
                         intent.putExtra("password", getIntent().getStringExtra("password"));
+                        Log.i("Username from intent", intent.getStringExtra("username"));
+                        Log.i("Password from intent", intent.getStringExtra("password"));
                         startActivity(intent);;
                         break;
 
