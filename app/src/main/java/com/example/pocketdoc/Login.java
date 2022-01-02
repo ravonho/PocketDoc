@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         textViewSignUp = findViewById(R.id.signUpText);
         progressBar = findViewById(R.id.progress);
 
-        autoLogin();
+        //autoLogin();
 
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
