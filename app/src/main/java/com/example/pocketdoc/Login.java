@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         textViewSignUp = findViewById(R.id.signUpText);
         progressBar = findViewById(R.id.progress);
 
-        //autoLogin();
+//        autoLogin();
 
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,9 +119,6 @@ public class Login extends AppCompatActivity {
 //    public void autoLogin(){
 //        if (mSharedPreferences.contains("username")) {
 //            Intent intent = new Intent(getApplicationContext(), homepage.class);
-//            //DO NOT REMOVE BEFORE DISCUSS WITH WKW
-//            intent.putExtra("username", mSharedPreferences.getString("username", "default"));
-//            intent.putExtra("password", mSharedPreferences.getString("password", "defaultPass"));
 //            startActivity(intent);
 //            finish();
 //        }

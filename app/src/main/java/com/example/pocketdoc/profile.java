@@ -59,21 +59,18 @@ public class profile extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     TextInputLayout name, password, email, contact;
     Button update, changepassword;
     Spinner dropdown;
-    private static final String[] items = {"Bernard", "JON", "Wong", "Yao Lun"};
+    //private static final String[] items = {"Bernard", "JON", "Wong", "Yao Lun"};
     String target = "";
     String userpassword = "";
     String beforeName = "default";
     String beforeEmail = "default@hotmail.com";
     String beforeContact = "9274010";
     String beforePassword = "123456";
-
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -96,6 +93,47 @@ public class profile extends AppCompatActivity {
         contact = findViewById(R.id.contact);
         update = findViewById(R.id.update);
         changepassword = findViewById(R.id.changepassword);
+
+        drawerLayout = findViewById(R.id.drawerlayout);
+        navigationView = findViewById(R.id.navigationView);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open, R.string.menu_CLose);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        Log.i("MENU_DRAWER_TAG", "Home item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(profile.this, homepage.class));
+                        break;
+
+                    case R.id.nav_profile:
+                        Log.i("Menu_Drawer_Tag", "Profile item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(profile.this, profile.class));
+                        break;
+
+                    case R.id.nav_contact:
+                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(profile.this, contactus.class));
+                        break;
+
+                    case R.id.nav_logout:
+                        Log.i("Menu_Drawer_Tag", "Logout item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(profile.this, Login.class));
+                        break;
+                }
+                return true;
+            }
+        });
+
+
 
         //Snackbar
         drawerLayout = findViewById(R.id.drawerlayout);
