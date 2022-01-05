@@ -38,8 +38,6 @@ public class Myappointment extends AppCompatActivity {
 
     EditText Search;
     ListView listview;
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
