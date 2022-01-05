@@ -1,6 +1,5 @@
 package com.example.pocketdoc;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,19 +13,12 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 
 public class AddAppointment extends AppCompatActivity {
 
-    TextInputEditText textInputEditTextChooseTime, textInputEditTextChooseDate, textInputEditTextChooseHospital, textInputEditTextChooseDisease;
-    Button Add_button;
+    TextInputEditText textInputEditTextappointmenttime, textInputEditTextappointmentdate, textInputEditTextappointmenthospital, textInputEditTextappointmentdisease;
+    Button Add_button, Back_button;
     ProgressBar progressBar;
 
     SharedPreferences mSharedPreferences;
@@ -41,25 +33,26 @@ public class AddAppointment extends AppCompatActivity {
         mSharedPreferences = getPreferences(Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
-        textInputEditTextChooseTime = findViewById(R.id.ChooseTime);
-        textInputEditTextChooseDate = findViewById(R.id.ChooseDate);
-        textInputEditTextChooseHospital = findViewById(R.id.ChooseHospital);
-        textInputEditTextChooseDisease = findViewById(R.id.ChooseDisease);
+        textInputEditTextappointmenttime = findViewById(R.id.appointmenttime);
+        textInputEditTextappointmentdate = findViewById(R.id.appointmentdate);
+        textInputEditTextappointmenthospital = findViewById(R.id.appointmenthospital);
+        textInputEditTextappointmentdisease = findViewById(R.id.appointmentdisease);
         Add_button = findViewById(R.id.Add_button);
+        Back_button = findViewById(R.id.Back_Button);
 
 
 
         Add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String ChooseTime, ChooseDate, ChooseHospital, ChooseDisease;
-                ChooseTime = String.valueOf(textInputEditTextChooseTime.getText());
-                ChooseDate = String.valueOf(textInputEditTextChooseTime.getText());
-                ChooseHospital = String.valueOf(textInputEditTextChooseTime.getText());
-                ChooseDisease = String.valueOf(textInputEditTextChooseTime.getText());
+                final String appointmenttime, appointmentdate, appointmenthospital, appointmentdisease;
+                appointmenttime = String.valueOf(textInputEditTextappointmenttime .getText());
+                appointmentdate = String.valueOf(textInputEditTextappointmentdate.getText());
+                appointmenthospital = String.valueOf(textInputEditTextappointmenthospital.getText());
+                appointmentdisease = String.valueOf(textInputEditTextappointmentdisease.getText());
 
 
-                if (!ChooseTime.equals("") && !ChooseDate.equals("") && !ChooseHospital.equals("") && !ChooseDisease.equals("")) {
+                if (!appointmenttime.equals("") && !appointmentdate.equals("") && !appointmenthospital.equals("") && !appointmentdisease.equals("")) {
                     progressBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler();
                     handler.post(new Runnable() {
@@ -68,16 +61,16 @@ public class AddAppointment extends AppCompatActivity {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
                             String[] field = new String[4];
-                            field[0] = "ChooseTime";
-                            field[1] = "ChooseDate";
-                            field[2] = "ChooseLocation";
-                            field[3] = "ChooseDisease";
+                            field[0] = "appointmenttime";
+                            field[1] = "appointmentdate";
+                            field[2] = "appointmenthospital";
+                            field[3] = "appointmentdisease";
                             //Creating array for data
                             String[] data = new String[4];
-                            field[0] = "ChooseTime";
-                            field[1] = "ChooseDate";
-                            field[2] = "ChooseLocation";
-                            field[3] = "ChooseDisease";
+                            field[0] = appointmenttime;
+                            field[1] = appointmentdate;
+                            field[2] = appointmenthospital;
+                            field[3] = appointmentdisease;
                             PutData putData = new PutData("https://pocket-dr.herokuapp.com/addappointment.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
@@ -99,6 +92,13 @@ public class AddAppointment extends AppCompatActivity {
                 }
             }
 
+        });
+
+        Back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddAppointment.this, homepage.class));
+            }
         });
     }
 }
