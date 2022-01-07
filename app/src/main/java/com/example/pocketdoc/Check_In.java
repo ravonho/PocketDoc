@@ -31,7 +31,7 @@ import java.util.List;
 
 public class Check_In extends AppCompatActivity {
 
-    Button bt_scan;
+    Button bt_scan, bt_stepcount;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -90,6 +90,16 @@ public class Check_In extends AppCompatActivity {
         });
 
         bt_scan = findViewById(R.id.bt_scan);
+        bt_stepcount = findViewById(R.id.bt_stepcount);
+
+        bt_stepcount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Check_In.this, StepCounter.class);
+                startActivity(intent);
+            }
+        });
+
         bt_scan.setOnClickListener(new View.OnClickListener() {
 
             @Override
