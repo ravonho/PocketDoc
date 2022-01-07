@@ -83,6 +83,12 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                         startActivity(intent);;
                         break;
 
+                    case R.id.nav_stepcount:
+                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(homepage.this, StepCounter.class));
+                        break;
+
                     case R.id.nav_contact:
                         Log.i("Menu_Drawer_Tag", "Contact item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
