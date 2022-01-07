@@ -33,8 +33,8 @@ public class AddAppointment extends AppCompatActivity {
         mSharedPreferences = getPreferences(Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
-        textInputEditTextappointmenttime = findViewById(R.id.appointmenttime);
         textInputEditTextappointmentdate = findViewById(R.id.appointmentdate);
+        textInputEditTextappointmenttime = findViewById(R.id.appointmenttime);
         textInputEditTextappointmenthospital = findViewById(R.id.appointmenthospital);
         textInputEditTextappointmentdisease = findViewById(R.id.appointmentdisease);
         Add_button = findViewById(R.id.Add_button);
@@ -46,8 +46,8 @@ public class AddAppointment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final String appointmenttime, appointmentdate, appointmenthospital, appointmentdisease;
-                appointmenttime = String.valueOf(textInputEditTextappointmenttime .getText());
-                appointmentdate = String.valueOf(textInputEditTextappointmentdate.getText());
+                appointmentdate = String.valueOf(textInputEditTextappointmentdate .getText());
+                appointmenttime = String.valueOf(textInputEditTextappointmenttime.getText());
                 appointmenthospital = String.valueOf(textInputEditTextappointmenthospital.getText());
                 appointmentdisease = String.valueOf(textInputEditTextappointmentdisease.getText());
 
@@ -61,14 +61,14 @@ public class AddAppointment extends AppCompatActivity {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
                             String[] field = new String[4];
-                            field[0] = "appointmenttime";
-                            field[1] = "appointmentdate";
+                            field[0] = "appointmentdate";
+                            field[1] = "appointmenttime";
                             field[2] = "appointmenthospital";
                             field[3] = "appointmentdisease";
                             //Creating array for data
                             String[] data = new String[4];
-                            field[0] = appointmenttime;
-                            field[1] = appointmentdate;
+                            field[0] = appointmentdate;
+                            field[1] = appointmenttime;
                             field[2] = appointmenthospital;
                             field[3] = appointmentdisease;
                             PutData putData = new PutData("https://pocket-dr.herokuapp.com/addappointment.php", "POST", field, data);

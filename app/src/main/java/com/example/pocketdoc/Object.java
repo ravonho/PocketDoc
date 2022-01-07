@@ -13,9 +13,7 @@ public class Object {
         this.End=End;
     }
 
-    public String getName() {
-        return Name;
-    }
+    public String getName() { return Name; }
 
     public String getContact() {
         return Contact;

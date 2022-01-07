@@ -3,9 +3,11 @@ package com.example.pocketdoc;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -38,6 +40,8 @@ public class Myappointment extends AppCompatActivity {
 
     EditText Search;
     ListView listview;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
@@ -52,7 +56,46 @@ public class Myappointment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myappointment);
+        setContentView(R.layout.activity_search_hospital);
+
+        drawerLayout = findViewById(R.id.drawerlayout);
+        navigationView = findViewById(R.id.navigationView);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open, R.string.menu_CLose);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        Log.i("MENU_DRAWER_TAG", "Home item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(Myappointment.this, homepage.class));
+                        break;
+
+                    case R.id.nav_profile:
+                        Log.i("Menu_Drawer_Tag", "Profile item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(Myappointment.this, profile.class));
+                        break;
+
+                    case R.id.nav_contact:
+                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(Myappointment.this, contactus.class));
+                        break;
+
+                    case R.id.nav_logout:
+                        Log.i("Menu_Drawer_Tag", "Logout item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(Myappointment.this, Login.class));
+                        break;
+                }
+                return true;
+            }
+        });
 
         listview = findViewById(R.id.list_view);
         Search = findViewById(R.id.search);
@@ -64,7 +107,7 @@ public class Myappointment extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                View_Appointment(s.toString());
+                search_data(s.toString());
             }
 
             @Override
@@ -74,7 +117,7 @@ public class Myappointment extends AppCompatActivity {
         });
     }
     ArrayList<Appointment> model;
-    void View_Appointment(String data_search)
+    void search_data(String data_search)
     {
         String url="https://pocket-dr.herokuapp.com/index.php?action=showAppointment="+data_search;
         StringRequest stringRequest = new StringRequest(
@@ -99,9 +142,9 @@ public class Myappointment extends AppCompatActivity {
 
                                 model.add(new Appointment(appointmenttime, appointmentdate, appointmenthospital, appointmentdisease));
                             }
-                            final Adapter2 adapter2 =new Adapter2(Myappointment.this, model);
-                            Log.d("Adapter Count", Integer.toString(adapter2.getCount()));
-                            listview.setAdapter(adapter2);
+                            final Adapter2 adapter =new Adapter2(Myappointment.this, model);
+                            Log.d("Adapter Count", Integer.toString(adapter.getCount()));
+                            listview.setAdapter(adapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -120,7 +163,7 @@ public class Myappointment extends AppCompatActivity {
     }
 }
 
-class Adapter2 extends BaseAdapter {
+ class Adapter2 extends BaseAdapter {
 
     ArrayList<Appointment> model;
     LayoutInflater inflater;
@@ -151,17 +194,18 @@ class Adapter2 extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view=inflater.inflate(R.layout.list_item, parent, false);
-        appointmenttime=view.findViewById(R.id.appointmenttime);
-        appointmentdate=view.findViewById(R.id.appointmentdate);
-        appointmenthospital=view.findViewById(R.id.appointmenthospital);
-        appointmentdisease=view.findViewById(R.id.appointmentdisease);
+        View view=inflater.inflate(R.layout.list_hospital, parent, false);
+        appointmentdate=view.findViewById(R.id.appointment_date);
+        appointmenttime=view.findViewById(R.id.appointment_time);
+        appointmenthospital=view.findViewById(R.id.appointment_location);
+        appointmentdisease=view.findViewById(R.id.appointment_disease);
 
 
-        appointmenttime.setText(model.get(position).getappointmenttime());
         appointmentdate.setText(model.get(position).getappointmentdate());
+        appointmenttime.setText(model.get(position).getappointmenttime());
         appointmenthospital.setText(model.get(position).getappointmenthospital());
         appointmentdisease.setText(model.get(position).getappointmentdisease());
+
 
         return view;
     }
