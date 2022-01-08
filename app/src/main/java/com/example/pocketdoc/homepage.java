@@ -27,6 +27,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -56,6 +57,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
         D5.setOnClickListener((View.OnClickListener) this);
         D6.setOnClickListener((View.OnClickListener) this);
 
+        sharedPrefManager = new SharedPrefManager(getApplicationContext());
 
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
@@ -105,6 +107,8 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                     case R.id.nav_logout:
                         Log.i("Menu_Drawer_Tag", "Logout item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        SharedPrefManager.getInstance(homepage.this).logout();
+                        finish();
                         startActivity(new Intent(homepage.this, Login.class));
                         break;
                 }
