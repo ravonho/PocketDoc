@@ -38,6 +38,9 @@
             android:name=".profile"
             android:exported="false" />
         <activity
+            android:name=".StepCounter"
+            android:exported="false" />
+        <activity
             android:name=".SearchDisease"
             android:exported="false" />
         <activity
