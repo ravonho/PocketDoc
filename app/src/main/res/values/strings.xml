@@ -11,4 +11,5 @@
     <string name="contact">Contact</string>
     <string name="loginhere">Already have an account? <u>Login</u></string>
     <string name="signuphere">Do not have an account? <u>SignUp</u></string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
