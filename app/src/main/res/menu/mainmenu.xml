@@ -18,6 +18,12 @@
             android:icon="@drawable/ic_baseline_directions_walk_24"
             android:title="Step Counter" />
 
+        <item
+            android:id="@+id/nav_gpstracker"
+            android:icon="@drawable/ic_baseline_gps_fixed_24"
+            android:title="GPS Tracker" />
+
+
     </group>
 
     <group android:checkableBehavior="single">
