@@ -5,16 +5,12 @@
       <map>
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_add_appointment.xml" value="0.264" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_contactus.xml" value="0.2115036231884058" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_homepage.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_login.xml" value="0.2717391304347826" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_myappointment.xml" value="0.2115036231884058" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_profile.xml" value="0.2115036231884058" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease.xml" value="0.1983695652173913" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_doctor.xml" value="0.1983695652173913" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_hospital.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_sign_up.xml" value="0.2717391304347826" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_hospital.xml" value="0.264" />
-        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_item.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.28615384615384615" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.28615384615384615" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/drawable/ic_baseline_emoji_people_24.xml" value="0.28615384615384615" />
@@ -26,15 +22,24 @@
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_contactus.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_docprofile.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_edit_user_password.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_gpstracker.xml" value="0.264" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_homepage.xml" value="0.16576086956521738" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_myappointment.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_profile.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_registerpage.xml" value="0.26222826086956524" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease2.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_doctor.xml" value="0.24592391304347827" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_doctor2.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_hospital.xml" value="0.1" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_show_saved_locations_list.xml" value="0.2554347826086957" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_stepcounter.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/check_in.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/headermenu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_item.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/menu/mainmenu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease2.xml" value="0.38697916666666665" />
@@ -53,11 +58,10 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_disease.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_doctor.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_hospital.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_stepcounter.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/check_in.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/check_in.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/custom_header.xml" value="0.17844202898550723" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/headermenu.xml" value="0.20652173913043478" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_item.xml" value="0.16" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/profile.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/row_search.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/toolbar.xml" value="0.25" />

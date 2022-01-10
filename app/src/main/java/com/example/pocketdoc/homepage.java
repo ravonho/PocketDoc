@@ -27,6 +27,7 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
+    //SharedPrefManager sharedPrefManager;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -56,6 +57,8 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
         D5.setOnClickListener((View.OnClickListener) this);
         D6.setOnClickListener((View.OnClickListener) this);
 
+        //sharedPrefManager = new SharedPrefManager(getApplicationContext());
+
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open, R.string.menu_CLose);
@@ -84,9 +87,15 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                         break;
 
                     case R.id.nav_stepcount:
-                        Log.i("Menu_Drawer_Tag", "Contact item is clicked");
+                        Log.i("Menu_Drawer_Tag", "Step Counter item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
                         startActivity(new Intent(homepage.this, StepCounter.class));
+                        break;
+
+                    case R.id.nav_gpstracker:
+                        Log.i("Menu_Drawer_Tag", "GPS Tracker item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(new Intent(homepage.this, GPStracker.class));
                         break;
 
                     case R.id.nav_contact:
@@ -98,7 +107,9 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
                     case R.id.nav_logout:
                         Log.i("Menu_Drawer_Tag", "Logout item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        startActivity(new Intent(homepage.this, MainActivity.class));
+                        //SharedPrefManager.getInstance(homepage.this).logout();
+                        //finish();
+                        startActivity(new Intent(homepage.this, Login.class));
                         break;
                 }
                 return true;
