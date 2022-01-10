@@ -3,6 +3,8 @@ package com.example.pocketdoc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.http.AndroidHttpClient;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -10,6 +12,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,4 +55,5 @@ public class MainActivity extends AppCompatActivity {
         },SPLASH_SCREEN);
 
     }
+
 }

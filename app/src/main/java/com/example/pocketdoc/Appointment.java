@@ -2,13 +2,14 @@ package com.example.pocketdoc;
 
 public class Appointment {
 
-        String appointmenttime="", appointmentdate="", appointmenthospital="", appointmentdisease="";
-        Appointment(String appointmenttime,String appointmentdate, String appointmenthospital, String appointmentdisease)
+        String appointmentdisease="", appointmenttime="", appointmentdate="", appointmenthospital="";
+        Appointment(String appointmentdisease, String appointmenttime,String appointmentdate, String appointmenthospital)
         {
+            this.appointmentdisease=appointmentdisease;
             this.appointmenttime=appointmenttime;
             this.appointmentdate=appointmentdate;
             this.appointmenthospital=appointmenthospital;
-            this.appointmentdisease=appointmentdisease;
+
 
         }
 

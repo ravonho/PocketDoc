@@ -38,7 +38,7 @@ import java.util.ArrayList;
 
 public class Myappointment extends AppCompatActivity {
 
-    EditText Search;
+    EditText Search_appointment;
     ListView listview;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -56,7 +56,7 @@ public class Myappointment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_hospital);
+        setContentView(R.layout.activity_myappointment);
 
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationView);
@@ -98,8 +98,8 @@ public class Myappointment extends AppCompatActivity {
         });
 
         listview = findViewById(R.id.list_view);
-        Search = findViewById(R.id.search);
-        Search.addTextChangedListener(new TextWatcher() {
+        Search_appointment = findViewById(R.id.Search_appointment);
+        Search_appointment.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -119,7 +119,7 @@ public class Myappointment extends AppCompatActivity {
     ArrayList<Appointment> model;
     void search_data(String data_search)
     {
-        String url="https://pocket-dr.herokuapp.com/index.php?action=showAppointment="+data_search;
+        String url="https://pocket-dr.herokuapp.com/index.php"+data_search;
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
                 url,
@@ -134,17 +134,18 @@ public class Myappointment extends AppCompatActivity {
                             for (int i=0; i<getresult.length(); i++)
                             {
                                 JSONObject getData = getresult.getJSONObject(i);
+                                String appointmentdisease = getData.getString("appointmentdisease");
                                 String appointmenttime = getData.getString("appointmenttime");
                                 String appointmentdate = getData.getString("appointmentdate");
                                 String appointmenthospital = getData.getString("appointmenthospital");
-                                String appointmentdisease = getData.getString("appointmentdisease");
 
 
-                                model.add(new Appointment(appointmenttime, appointmentdate, appointmenthospital, appointmentdisease));
+
+                                model.add(new Appointment(appointmentdisease, appointmenttime, appointmentdate, appointmenthospital));
                             }
-                            final Adapter2 adapter =new Adapter2(Myappointment.this, model);
-                            Log.d("Adapter Count", Integer.toString(adapter.getCount()));
-                            listview.setAdapter(adapter);
+                            final Adapter2 adapter2 =new Adapter2(Myappointment.this, model);
+                            Log.d("Adapter Count", Integer.toString(adapter2.getCount()));
+                            listview.setAdapter(adapter2);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -194,17 +195,18 @@ public class Myappointment extends AppCompatActivity {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view=inflater.inflate(R.layout.list_hospital, parent, false);
-        appointmentdate=view.findViewById(R.id.appointment_date);
-        appointmenttime=view.findViewById(R.id.appointment_time);
-        appointmenthospital=view.findViewById(R.id.appointment_location);
-        appointmentdisease=view.findViewById(R.id.appointment_disease);
+        View view=inflater.inflate(R.layout.list_appointment, parent, false);
+        appointmentdisease=view.findViewById(R.id.appointmentdisease);
+        appointmentdate=view.findViewById(R.id.appointmentdate);
+        appointmenttime=view.findViewById(R.id.appointmenttime);
+        appointmenthospital=view.findViewById(R.id.appointmenthospital);
 
 
+        appointmentdisease.setText(model.get(position).getappointmentdisease());
         appointmentdate.setText(model.get(position).getappointmentdate());
         appointmenttime.setText(model.get(position).getappointmenttime());
         appointmenthospital.setText(model.get(position).getappointmenthospital());
-        appointmentdisease.setText(model.get(position).getappointmentdisease());
+
 
 
         return view;

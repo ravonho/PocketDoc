@@ -22,24 +22,32 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <RelativeLayout
                     android:layout_width="20dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
+
                 <EditText
-                    android:id="@+id/search"
+                    android:id="@+id/Search_appointment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="49dp"
                     android:background="@color/white"
-                    android:hint="Search Appointment"
-                    android:padding="10dp"
-                    android:drawableEnd="@drawable/ic_baseline_search_24"/>
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Search Appointment" />
+
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
 
         <ListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+        </ListView>
 
 
     </LinearLayout>
@@ -51,8 +59,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/headermenu"
-        app:menu="@menu/mainmenu">
-    </com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/mainmenu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
