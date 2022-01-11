@@ -41,6 +41,8 @@ public class SearchDoctor extends AppCompatActivity {
 
     RequestQueue requestQueue;
     static Map<String, String> params;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
