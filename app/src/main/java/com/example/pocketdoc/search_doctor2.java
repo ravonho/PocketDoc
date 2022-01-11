@@ -1,13 +1,21 @@
 package com.example.pocketdoc;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class search_doctor2 extends AppCompatActivity {
 
@@ -20,6 +28,7 @@ public class search_doctor2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_doctor2);
+
 
         doctor_name = findViewById(R.id.doctor_name);
         doctor_name.append(getIntent().getStringExtra("doctor_name"));
