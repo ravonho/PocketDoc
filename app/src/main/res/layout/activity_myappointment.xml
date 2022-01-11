@@ -14,38 +14,34 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginRight="17dp"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_marginRight="17dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
 
-                <RelativeLayout
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/Search_Appointment"
+                android:layout_width="324dp"
+                android:layout_height="34dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:hint="Search Appointment" />
 
-                </RelativeLayout>
-
-                <EditText
-                    android:id="@+id/Search_appointment"
-                    android:layout_width="match_parent"
-                    android:layout_height="49dp"
-                    android:background="@color/white"
-                    android:backgroundTint="@color/white"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Search Appointment" />
-
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
         <ListView
-            android:id="@+id/list_view"
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
         </ListView>
 
@@ -59,7 +55,9 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/headermenu"
-        app:menu="@menu/mainmenu"/>
+        app:menu="@menu/mainmenu">
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

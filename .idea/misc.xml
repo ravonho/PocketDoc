@@ -13,6 +13,8 @@
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_doctor2.xml" value="0.18125" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_search_hospital.xml" value="0.176" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/activity_sign_up.xml" value="0.2717391304347826" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/headermenu.xml" value="0.11231884057971014" />
+        <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_appointment.xml" value="0.11231884057971014" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_hospital.xml" value="0.12273550724637682" />
         <entry key="..\:/Users/ACER/AndroidStudioProjects/PocketDoc/app/src/main/res/layout/list_item.xml" value="0.12273550724637682" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/PocketDoc/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.28615384615384615" />
@@ -85,5 +87,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2115036231884058" />
+      </ProjectState>
+    </option>
   </component>
 </project>

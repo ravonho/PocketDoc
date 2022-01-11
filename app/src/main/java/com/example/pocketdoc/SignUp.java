@@ -11,8 +11,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pocketdoc.Login;
-import com.example.pocketdoc.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -35,7 +33,7 @@ public class SignUp extends AppCompatActivity {
         textInputEditTextContact = findViewById(R.id.contact);
         buttonSignUp = findViewById(R.id.buttonSignUp);
         textViewLogin = findViewById(R.id.loginText);
-        progressBar = findViewById(R.id.progress);
+        progressBar = findViewById(R.id.progressbar);
 
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override

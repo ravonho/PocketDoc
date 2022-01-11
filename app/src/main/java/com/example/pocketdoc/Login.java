@@ -13,13 +13,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pocketdoc.R;
-import com.example.pocketdoc.SignUp;
-import com.example.pocketdoc.homepage;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
-
-import org.json.JSONObject;
 
 public class Login extends AppCompatActivity {
 
@@ -43,7 +38,7 @@ public class Login extends AppCompatActivity {
         textInputEditTextPassword = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.buttonLogin);
         textViewSignUp = findViewById(R.id.signUpText);
-        progressBar = findViewById(R.id.progress);
+        progressBar = findViewById(R.id.progressbar);
 
 //        autoLogin();
 

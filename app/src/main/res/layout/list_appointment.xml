@@ -33,7 +33,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/appointment_location"
+        android:id="@+id/appointment_hospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Location"
