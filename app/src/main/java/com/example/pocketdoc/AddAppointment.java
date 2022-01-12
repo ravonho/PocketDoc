@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -26,10 +25,10 @@ public class AddAppointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
 
-        textInputEditTextAppointmentDate = findViewById(R.id.appointmentdate);
-        textInputEditTextAppointmentTime = findViewById(R.id.appointmenttime);
-        textInputEditTextAppointmentHospital = findViewById(R.id.appointmenthospital);
-        textInputEditTextAppointmentDisease = findViewById(R.id.appointmentdisease);
+        textInputEditTextAppointmentDate = findViewById(R.id.appointment_date);
+        textInputEditTextAppointmentTime = findViewById(R.id.appointment_time);
+        textInputEditTextAppointmentHospital = findViewById(R.id.appointment_hospital);
+        textInputEditTextAppointmentDisease = findViewById(R.id.appointment_disease);
         Button_Add= findViewById(R.id.Add_button);
         Button_Back= findViewById(R.id.Back_Button);
         progressBar = findViewById(R.id.progressbar);
@@ -38,14 +37,14 @@ public class AddAppointment extends AppCompatActivity {
         Button_Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String appointmentdate, appointmenttime, appointmenthospital, appointmentdisease;
-                appointmentdate = String.valueOf(textInputEditTextAppointmentDate.getText());
-                appointmenttime = String.valueOf(textInputEditTextAppointmentTime.getText());
-                appointmenthospital = String.valueOf(textInputEditTextAppointmentHospital.getText());
-                appointmentdisease = String.valueOf(textInputEditTextAppointmentDisease.getText());
+                final String appointment_date, appointment_time, appointment_hospital, appointment_disease;
+                appointment_date = String.valueOf(textInputEditTextAppointmentDate.getText());
+                appointment_time = String.valueOf(textInputEditTextAppointmentTime.getText());
+                appointment_hospital = String.valueOf(textInputEditTextAppointmentHospital.getText());
+                appointment_disease = String.valueOf(textInputEditTextAppointmentDisease.getText());
 
 
-                if (!appointmentdate.equals("") && !appointmenttime.equals("") && !appointmenthospital.equals("") && !appointmentdisease.equals("") ) {
+                if (!appointment_date.equals("") && !appointment_time.equals("") && !appointment_hospital.equals("") && !appointment_disease.equals("") ) {
                     progressBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler();
                     handler.post(new Runnable() {
@@ -54,16 +53,16 @@ public class AddAppointment extends AppCompatActivity {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
                             String[] field = new String[4];
-                            field[0] = "appointmentdate";
-                            field[1] = "appointmenttime";
-                            field[2] = "appointmenthospital";
-                            field[3] = "appointmentdisease";
+                            field[0] = "appointment_date";
+                            field[1] = "appointment_time";
+                            field[2] = "appointment_hospital";
+                            field[3] = "appointment_disease";
                             //Creating array for data
                             String[] data = new String[4];
-                            data[0] = appointmentdate;
-                            data[1] = appointmenttime;
-                            data[2] = appointmenthospital;
-                            data[3] = appointmentdisease;
+                            data[0] = appointment_date;
+                            data[1] = appointment_time;
+                            data[2] = appointment_hospital;
+                            data[3] = appointment_disease;
 
 
                             PutData putData = new PutData("https://pocket-dr.herokuapp.com/addappointment.php", "POST", field, data);

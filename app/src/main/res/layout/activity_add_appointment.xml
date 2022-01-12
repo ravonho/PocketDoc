@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.219">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/appointmentdate"
+            android:id="@+id/appointment_date"
             android:layout_width="227dp"
             android:layout_height="57dp"
             android:background="@android:color/darker_gray"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.353">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/appointmenttime"
+            android:id="@+id/appointment_time"
             android:layout_width="227dp"
             android:layout_height="57dp"
             android:background="@android:color/darker_gray"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/appointmenthospital"
+            android:id="@+id/appointment_hospital"
             android:layout_width="227dp"
             android:layout_height="57dp"
             android:background="@android:color/darker_gray"
@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.641">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/appointmentdisease"
+            android:id="@+id/appointment_disease"
             android:layout_width="227dp"
             android:layout_height="57dp"
             android:background="@android:color/darker_gray"
