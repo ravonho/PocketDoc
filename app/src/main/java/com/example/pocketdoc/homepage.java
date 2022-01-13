@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.mlkit.common.sdkinternal.SharedPrefManager;
 
 public class homepage extends AppCompatActivity implements View.OnClickListener{
 
@@ -130,7 +131,12 @@ public class homepage extends AppCompatActivity implements View.OnClickListener{
             case R.id.searchD : i = new Intent(this,SearchDisease.class); startActivity(i);
                 break;
 
-            case R.id.myappointment : i = new Intent(this,Myappointment.class); startActivity(i);
+            case R.id.myappointment :
+//                i = new Intent(this,Myappointment.class);
+                Intent Intent = new Intent(getApplicationContext(), Myappointment.class);
+            Intent.putExtra("username", getIntent().getStringExtra("username"));
+                Log.i("Username from intent", Intent.getStringExtra("username"));
+                startActivity(Intent);
                 break;
 
             case R.id.searchHospital:  i = new Intent(this,SearchHospital.class); startActivity(i);

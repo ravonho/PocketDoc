@@ -4,48 +4,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage"
+    tools:context=".profile"
     android:id="@+id/drawerlayout">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:orientation="vertical"
+        tools:context=".profile">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="261dp"
-            android:layout_height="55dp"
-            android:ems="10"
-            android:hint="Search Appointment"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/buttonSAppointment"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#00bfff"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="Hello!"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/greeting2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greeting"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="Thank you for using PocketDoc"
+                android:textSize="14sp" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <LinearLayout
             android:layout_height="wrap_content"
-            android:text="Back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.915" />
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <ImageView
-            android:id="@+id/SearchViewAppointment"
-            android:layout_width="59dp"
-            android:layout_height="41dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.786"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_search_24" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Full Name"
+                android:id="@+id/username"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Appointment Date"
+                android:id="@+id/appointment_date"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableLeft="@drawable/ic_baseline_attach_email_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Appointment Time"
+                android:id="@+id/appointment_time"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Appointment Hospital"
+                android:id="@+id/appointment_hospital"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="Appointment Disease"
+                android:id="@+id/appointment_disease"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/headermenu"
+        app:menu="@menu/mainmenu">
+    </com.google.android.material.navigation.NavigationView>
+
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
-
