@@ -59,15 +59,13 @@ public class SignUp extends AppCompatActivity {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            //Starting Write and Read data with URL
-                            //Creating array for parameters
                             String[] field = new String[5];
                             field[0] = "fullname";
                             field[1] = "username";
                             field[2] = "password";
                             field[3] = "email";
                             field[4] = "contact";
-                            //Creating array for data
+
                             String[] data = new String[5];
                             data[0] = fullname;
                             data[1] = username;
@@ -81,7 +79,10 @@ public class SignUp extends AppCompatActivity {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     if (result.equals("Sign Up Success")) {
+                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), Login.class);
+                                        startActivity(intent);
+                                        finish();
 
                                     } else {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
