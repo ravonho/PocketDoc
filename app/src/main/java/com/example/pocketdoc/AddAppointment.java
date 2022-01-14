@@ -75,7 +75,10 @@ public class AddAppointment extends AppCompatActivity {
                                     progressBar.setVisibility(View.GONE);
                                     String result = putData.getResult();
                                     if (result.equals("Add appointment Success")) {
-                                        Intent intent = new Intent(getApplicationContext(), AddAppointment.class);
+                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), Myappointment.class);
+                                        startActivity(intent);
+                                        finish();
 
                                     } else {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
