@@ -86,10 +86,10 @@
                 android:layout_width="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:drawableLeft="@drawable/ic_baseline_attach_email_24"
-                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent" />
+                    android:drawableLeft="@drawable/ic_baseline_access_time_filled_24"
+                    android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,10 +100,10 @@
                 android:layout_width="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
-                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent" />
+                    android:drawableLeft="@drawable/ic_baseline_access_time_filled_24"
+                    android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,10 +114,10 @@
                 android:layout_width="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
-                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent" />
+                    android:drawableLeft="@drawable/ic_baseline_location_city_24"
+                    android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,10 +128,10 @@
                 android:layout_width="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
-                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent" />
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -22,6 +22,26 @@
         app:layout_constraintVertical_bias="0.099" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayoutAppointmentUser"
+        android:layout_width="227dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:hint="Username"
+            android:textAlignment="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/TextInputLayoutAppointmentDate"
         android:layout_width="227dp"
         android:layout_height="57dp"
@@ -30,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219">
+        app:layout_constraintVertical_bias="0.318">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appointment_date"
@@ -40,7 +60,7 @@
             android:backgroundTint="@android:color/darker_gray"
             android:hint="DD/MM/YYYY"
             android:textAlignment="center"
-            tools:targetApi="jelly_bean"/>
+            tools:targetApi="jelly_bean" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.353">
+        app:layout_constraintVertical_bias="0.463">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appointment_time"
@@ -63,7 +83,7 @@
             android:backgroundTint="@android:color/darker_gray"
             android:hint="00:00 AM/PM"
             android:textAlignment="center"
-            tools:targetApi="jelly_bean"/>
+            tools:targetApi="jelly_bean" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,7 +95,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appointment_hospital"
@@ -85,7 +106,7 @@
             android:backgroundTint="@android:color/darker_gray"
             android:hint="Choose Hospital"
             android:textAlignment="center"
-            tools:targetApi="jelly_bean"/>
+            tools:targetApi="jelly_bean" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -97,7 +118,7 @@
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641">
+        app:layout_constraintVertical_bias="0.76">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/appointment_disease"
@@ -107,7 +128,7 @@
             android:backgroundTint="@android:color/darker_gray"
             android:hint="Descibe The Disease"
             android:textAlignment="center"
-            tools:targetApi="jelly_bean"/>
+            tools:targetApi="jelly_bean" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836"
+        app:layout_constraintVertical_bias="0.899"
 
         />
 
@@ -141,10 +162,10 @@
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
+        app:layout_constraintVertical_bias="0.897" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,7 +16,7 @@ import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class AddAppointment extends AppCompatActivity {
 
-    TextInputEditText textInputEditTextAppointmentDate, textInputEditTextAppointmentTime, textInputEditTextAppointmentHospital, textInputEditTextAppointmentDisease;
+    TextInputEditText textInputEditTextAppointmentUser, textInputEditTextAppointmentDate, textInputEditTextAppointmentTime, textInputEditTextAppointmentHospital, textInputEditTextAppointmentDisease;
     Button Button_Add,Button_Back;
     ProgressBar progressBar;
 
@@ -25,6 +25,7 @@ public class AddAppointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appointment);
 
+        textInputEditTextAppointmentUser = findViewById(R.id.username);
         textInputEditTextAppointmentDate = findViewById(R.id.appointment_date);
         textInputEditTextAppointmentTime = findViewById(R.id.appointment_time);
         textInputEditTextAppointmentHospital = findViewById(R.id.appointment_hospital);
@@ -37,14 +38,15 @@ public class AddAppointment extends AppCompatActivity {
         Button_Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String appointment_date, appointment_time, appointment_hospital, appointment_disease;
+                final String username, appointment_date, appointment_time, appointment_hospital, appointment_disease;
+                username = String.valueOf(textInputEditTextAppointmentUser.getText());
                 appointment_date = String.valueOf(textInputEditTextAppointmentDate.getText());
                 appointment_time = String.valueOf(textInputEditTextAppointmentTime.getText());
                 appointment_hospital = String.valueOf(textInputEditTextAppointmentHospital.getText());
                 appointment_disease = String.valueOf(textInputEditTextAppointmentDisease.getText());
 
 
-                if (!appointment_date.equals("") && !appointment_time.equals("") && !appointment_hospital.equals("") && !appointment_disease.equals("") ) {
+                if ( !username.equals("") && !appointment_date.equals("") && !appointment_time.equals("") && !appointment_hospital.equals("") && !appointment_disease.equals("") ) {
                     progressBar.setVisibility(View.VISIBLE);
                     Handler handler = new Handler();
                     handler.post(new Runnable() {
@@ -52,17 +54,19 @@ public class AddAppointment extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[4];
-                            field[0] = "appointment_date";
-                            field[1] = "appointment_time";
-                            field[2] = "appointment_hospital";
-                            field[3] = "appointment_disease";
+                            String[] field = new String[5];
+                            field[0] = "username";
+                            field[1] = "appointment_date";
+                            field[2] = "appointment_time";
+                            field[3] = "appointment_hospital";
+                            field[4] = "appointment_disease";
                             //Creating array for data
-                            String[] data = new String[4];
-                            data[0] = appointment_date;
-                            data[1] = appointment_time;
-                            data[2] = appointment_hospital;
-                            data[3] = appointment_disease;
+                            String[] data = new String[5];
+                            data[0] = username;
+                            data[1] = appointment_date;
+                            data[2] = appointment_time;
+                            data[3] = appointment_hospital;
+                            data[4] = appointment_disease;
 
 
                             PutData putData = new PutData("https://pocket-dr.herokuapp.com/addappointment.php", "POST", field, data);
