@@ -15,7 +15,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="179dp"
             android:background="#00bfff"
             android:padding="20dp">
 
@@ -48,7 +48,6 @@
                 android:includeFontPadding="false"
                 android:text="Thank you for using PocketDoc"
                 android:textSize="14sp" />
-
 
 
         </RelativeLayout>
@@ -138,6 +137,17 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/nextRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/previousRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous" />
 
 
     </LinearLayout>
