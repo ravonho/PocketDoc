@@ -19,7 +19,7 @@ import com.google.android.material.navigation.NavigationView;
 public class search_disease2 extends AppCompatActivity {
 
     Button buttonbackDisease;
-    TextView disease_name, disease_desc;
+    TextView disease_name, disease_description;
 
 
     @Override
@@ -30,8 +30,8 @@ public class search_disease2 extends AppCompatActivity {
 
         disease_name = findViewById(R.id.disease_name);
         disease_name.append(getIntent().getStringExtra("disease_name"));
-        disease_desc = findViewById(R.id.disease_desc);
-        disease_desc.append(getIntent().getStringExtra("disease_desc"));
+        disease_description = findViewById(R.id.disease_description);
+        disease_description.append(getIntent().getStringExtra("disease_description"));
 
 
         buttonbackDisease = findViewById(R.id.buttonbackDisease);

@@ -67,7 +67,7 @@ public class SearchDisease extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Search", searchInput.getText().toString());
-                params.put("action", "searchDisease");
+                params.put("action", "showDisease");
                 params.put("disease_name", searchInput.getText().toString());
                 ProgressDialog loading = new ProgressDialog(SearchDisease.this);
                 loading.setTitle("Getting Disease Info");
@@ -84,7 +84,7 @@ public class SearchDisease extends AppCompatActivity {
                                     Log.d("Disease Data", diseaseData.toString());
                                     Intent foundDoctor = new Intent(SearchDisease.this, search_disease2.class);
                                     foundDoctor.putExtra("disease_name", diseaseData.getString("disease_name"));
-                                    foundDoctor.putExtra("disease_desc", diseaseData.getString("disease_desc"));
+                                    foundDoctor.putExtra("disease_description", diseaseData.getString("disease_description"));
 
                                     startActivity(foundDoctor);
                                 } catch (JSONException e) {
